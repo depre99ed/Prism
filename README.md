@@ -9,10 +9,10 @@ Un catalogue visuel et un loader Windows pour Counter-Strike 2.
 
 [![Télécharger pour Windows](https://img.shields.io/badge/T%C3%A9l%C3%A9charger-pour%20Windows-e6e6e6?style=for-the-badge&labelColor=171717)](https://github.com/depre99ed/Prism/releases/latest)
 
-[![Version](https://img.shields.io/github/v/release/depre99ed/Prism?style=flat-square&label=version&color=333333&labelColor=171717)](https://github.com/depre99ed/Prism/releases/latest)
+[![Version](https://img.shields.io/github/v/release/depre99ed/Prism?style=flat-square&label=version&color=333333&labelColor=171717&cacheSeconds=300)](https://github.com/depre99ed/Prism/releases/latest)
 ![Windows x64](https://img.shields.io/badge/Windows-x64-333333?style=flat-square&labelColor=171717)
 ![C++](https://img.shields.io/badge/C%2B%2B-17-333333?style=flat-square&labelColor=171717)
-[![Tests](https://img.shields.io/github/actions/workflow/status/depre99ed/Prism/checks.yml?style=flat-square&label=tests&labelColor=171717)](https://github.com/depre99ed/Prism/actions/workflows/checks.yml)
+[![Tests](https://img.shields.io/github/actions/workflow/status/depre99ed/Prism/checks.yml?style=flat-square&label=tests&labelColor=171717&branch=main&cacheSeconds=300)](https://github.com/depre99ed/Prism/actions/workflows/checks.yml)
 
 [Fonctionnalités](#fonctionnalités) · [Télécharger](#télécharger) · [Données locales](#données-locales) · [Développeurs](docs/BUILD.md) · [English](README.en.md)
 
