@@ -1,0 +1,19 @@
+name: Catalogue and UI checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows-tests:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Profile and catalogue tests
+        shell: powershell
+        run: .\Build.ps1 -Tests
+      - name: Native renderer checks
+        shell: powershell
+        run: .\tools\Test-Render.ps1

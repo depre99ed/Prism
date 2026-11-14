@@ -1,0 +1,22 @@
+[
+  {
+    "id": 142,
+    "path": "ext/blackbone/src/BlackBoneDrv/bin/x64/Win7Release/BlackBoneDrv7.sys",
+    "sha256": "b43afdc71df4ce5ba88c52f5b749f0e955bef618925b5ce40b182be7962dd216"
+  },
+  {
+    "id": 147,
+    "path": "ext/blackbone/src/BlackBoneDrv/bin/x64/Win8Release/BlackBoneDrv8.sys",
+    "sha256": "3e5bb01499147bc4bd77deea3a8b653f19b9a7594a59e38f71d7f1b6c193a274"
+  },
+  {
+    "id": 149,
+    "path": "ext/blackbone/src/BlackBoneDrv/bin/x64/Win8.1Release/BlackBoneDrv81.sys",
+    "sha256": "3178dafc6e523eb9f10f6347eeee823c105c51bf039c1d792589553a3c8378c3"
+  },
+  {
+    "id": 150,
+    "path": "ext/blackbone/src/BlackBoneDrv/bin/x64/Win10Release/BlackBoneDrv10.sys",
+    "sha256": "5f369dc17ac752ec3c76980ab4ced66b95e82e70606a4dd56abfe0b3e780ff59"
+  }
+]

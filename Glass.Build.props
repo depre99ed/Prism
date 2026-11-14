@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <GlassRoot>$(MSBuildThisFileDirectory)</GlassRoot>
+    <IncludePath>$(GlassRoot)compat\netfx;$(GlassRoot)ext;$(GlassRoot)ext\blackbone\contrib;$(IncludePath)</IncludePath>
+    <OutDir>$(GlassRoot)bin\$(Platform)\</OutDir>
+    <IntDir>$(GlassRoot).build\$(MSBuildProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(MSBuildProjectName)'=='Xenos'">Prism</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ForcedIncludeFiles>$(GlassRoot)compat\LegacyIncludes.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>/Zc:strictStrings- /permissive %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;gdiplus.lib;shell32.lib;advapi32.lib;comdlg32.lib;Shlwapi.lib;Dbghelp.lib;Comctl32.lib;dwmapi.lib;uxtheme.lib;ole32.lib;oleaut32.lib;uuid.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <!-- Distribution builds omit private debug metadata. Debug builds retain symbols. -->
+  <ItemDefinitionGroup Condition="'$(MSBuildProjectName)'=='Xenos' and '$(Configuration)'=='Release'">
+    <ClCompile>
+      <DebugInformationFormat>None</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateMapFile>false</GenerateMapFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup Condition="'$(MSBuildProjectName)'=='Xenos'">
+    <ClCompile Include="$(GlassRoot)compat\NetFxGuids.cpp" />
+  </ItemGroup>
+</Project>

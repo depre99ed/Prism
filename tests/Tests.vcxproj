@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations"><ProjectConfiguration Include="Release|x64"><Configuration>Release</Configuration><Platform>x64</Platform></ProjectConfiguration></ItemGroup>
+  <PropertyGroup Label="Globals"><ProjectName>Tests</ProjectName><WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion></PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration"><ConfigurationType>Application</ConfigurationType><PlatformToolset>v145</PlatformToolset><CharacterSet>Unicode</CharacterSet></PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup><OutDir>$(ProjectDir)..\.build\tests\</OutDir><IntDir>$(ProjectDir)..\.build\tests-obj\</IntDir></PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile><LanguageStandard>stdcpp17</LanguageStandard><RuntimeLibrary>MultiThreaded</RuntimeLibrary><PreprocessorDefinitions>BLACKBONE_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions><AdditionalIncludeDirectories>..\ext;..\compat\netfx</AdditionalIncludeDirectories><ForcedIncludeFiles>..\compat\LegacyIncludes.h</ForcedIncludeFiles></ClCompile>
+    <Link><SubSystem>Console</SubSystem><AdditionalDependencies>kernel32.lib;user32.lib;ole32.lib;advapi32.lib;shell32.lib;shlwapi.lib</AdditionalDependencies></Link>
+  </ItemDefinitionGroup>
+  <ItemGroup><ClCompile Include="ProfileTests.cpp" />
+    <ClCompile Include="..\src\CatalogueArchive.cpp" />
+    <ClCompile Include="..\vendor\miniz\miniz.c" />
+    <ClCompile Include="..\vendor\miniz\miniz_tdef.c" />
+    <ClCompile Include="..\vendor\miniz\miniz_tinfl.c" />
+    <ClCompile Include="..\vendor\miniz\miniz_zip.c" /><ClCompile Include="..\src\ProfileMgr.cpp" /><ClCompile Include="..\src\FileUtil.cpp" /></ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

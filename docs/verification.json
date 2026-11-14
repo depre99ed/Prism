@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-14",
+  "version_text": "1.1.1.1.2.7",
+  "version_numeric_pe": "1.1.2.7",
+  "original_sha256": "b0f06ac179f440428d849e67731535b8b7fc32307aab241998419cffbbd6f950",
+  "original_size": 4014080,
+  "recovered_binary_matches_desktop": true,
+  "preserved_project_files": 386,
+  "publication_only_adjustments": [
+    "ext/blackbone/.gitattributes"
+  ],
+  "fresh_build": "Release x64 succeeded",
+  "fresh_build_sha256": "cf0f9a38a72716177e75ff4284442e4d4a789c503ca46206a79c42c66c1bad0e",
+  "fresh_build_matches_original": false,
+  "matching_pe_sections": [
+    ".fptable",
+    ".rsrc"
+  ],
+  "source_binary_provenance_limit": "Recovered project contains an identical binary and matching version metadata. Buildability verified; no historical source manifest was available to prove that every current source byte was used for the original build.",
+  "isolated_tests": "passed",
+  "renderer": {
+    "png_exports": true,
+    "layered_window_present": true,
+    "win32_error": 0,
+    "failures": 0,
+    "width": 392,
+    "height": 444
+  },
+  "real_injection_tested": false,
+  "real_game_restart_tested": false,
+  "anti_cheat_compatibility_tested": false,
+  "release_executable": "Original binary; no modifications or replacement by fresh build"
+}
